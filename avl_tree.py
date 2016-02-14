@@ -10,7 +10,7 @@ I guess that it's not done quite properly because I've done it without knowing a
 
 
 class Sentinel(object):
-    value = left = right = None
+    data = left = right = None
     height = -1
 
 
