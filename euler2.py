@@ -128,49 +128,10 @@ def euler22():
     return sum_of_values
 
 
-def euler67or18():
-    edges = list()
-    previous = list()
-    row = 0
-    with open("triangle.txt", encoding='utf-8') as pattern_file:
-        for line in pattern_file:
-            counter = 0
-            this_values = list()
-            for n in line.split():
-                n = int(n)
-                this_values.append(n)
-                if previous:
-                    # from, to, value
-                    e = ((row - 1, counter - 1), (row, counter), n + previous[n - 1])
-                    f = ((row - 1, counter), (row, counter), n + previous[n])
-                    edges.append(e)
-                    edges.append(f)
-                    counter += 1
-            row += 1
-            previous = this_values
-
-    rows = list(range(0, row + 1))
-    cols = counter
-    edges.sort()
-    #
-    # for c in cols:
-    #     edges_copy = edges
-    #     for e in edges_copy:
-
-
-'''
-   00
- 10 11
-20 21 22
-
-'''
-
-
 
 if __name__ == '__main__':
     # print(euler2(4000000))
     # print(euler3(600851475143))
     # print(euler4(20))
     # print(next(euler9bis()))
-
-     print(euler67or18())
+    euler9()
