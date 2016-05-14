@@ -1,3 +1,6 @@
+'''
+Program which shows which artists songs there is the most in the folder
+'''
 import glob
 import os
 import re
